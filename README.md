@@ -31,19 +31,19 @@ Before installing the express load extension, please make a copy of your files.
 
 1. Clone the repository and navigate to the directory:
     ```sh
-    $ cd tf2autobot/
+    cd tf2autobot/
     ```
 
 2. Add the remote repository and fetch the `express-load` branch:
     ```sh
-    $ git remote add osc44r https://github.com/Osc44r/tf2autobot.git
-    $ git fetch osc44r express-load
+    git remote add osc44r https://github.com/Osc44r/tf2autobot.git
+    git fetch osc44r express-load
     ```
 
 3. Create and switch to a new branch to merge the `express-load` feature:
     ```sh
-    $ git checkout -b merge-express-load
-    $ git merge osc44r/express-load
+    git checkout -b merge-express-load
+    git merge osc44r/express-load
     ```
 
 4. If you are adding this feature to an already running bot, you need to update the configuration manually:
@@ -59,7 +59,7 @@ Before installing the express load extension, please make a copy of your files.
                 "enable": false
             },
             "expressLoad": {
-                "enable": false
+                "enable": true
             }
         }
         ```
