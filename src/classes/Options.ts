@@ -2511,7 +2511,7 @@ export function loadOptions(options?: Options): Options {
         discordBotToken: getOption('discordBotToken', '', String, incomingOptions),
         steamSupplyApiKey: getOption('steamsupplyApiKey', '', String, incomingOptions),
         steamApisApiKey: getOption('steamapisApiKey', '', String, incomingOptions),
-        expressLoadApiKey: getOption('expressLoadApiKey', '', String, incomingOptions),
+        expressLoadApiKey: getOption('expressloadApiKey', '', String, incomingOptions),
 
         admins: getOption('admins', [], jsonParseAdminData, incomingOptions),
         keep: getOption('keep', [], jsonParseArray, incomingOptions),
