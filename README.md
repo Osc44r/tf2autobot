@@ -59,7 +59,7 @@ Before installing the express load extension, please make a copy of your files.
                 "enable": false
             },
             "expressLoad": {
-                "enable": false
+                "enable": true
             }
         }
         ```
