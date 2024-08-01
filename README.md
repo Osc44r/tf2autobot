@@ -1,7 +1,6 @@
-# TF2Autobot
+# TF2Autobot + ExpressLoad
 
 <div align="center"><a href="https://autobot.tf/"><img src="https://user-images.githubusercontent.com/47635037/100915844-e05e7380-350f-11eb-96f1-6d61141c4a44.png" alt="TF2Autobot" style="display: block; margin-left: auto; margin-right: auto;"></a></div>
-
 
 A free and open source fully automated TF2 trading bot advertising on [backpack.tf](https://backpack.tf) using prices from [prices.tf](https://prices.tf).
 **TF2Autobot** is an improved and feature rich version of the original **tf2-automatic** made by [Nicklason](https://github.com/Nicklason). You can find out more about the original repository [here](https://github.com/Nicklason/tf2-automatic).
@@ -24,6 +23,61 @@ Before you install the bot, there are a few things you will need:
 -   NodeJS version 16.x or latest LTS
 -   Typescript 4.1 or above
 
+**ExpressLoad** is now part of this repository, providing an option to load Steam inventories without rate limits for a small fee. This feature is available in the `express-load` branch.
+
+## Express Load Installation Instructions
+
+Before installing the express load extension, please make a copy of your files.
+
+1. Clone the repository and navigate to the directory:
+    ```sh
+    $ cd tf2autobot/
+    ```
+
+2. Add the remote repository and fetch the `express-load` branch:
+    ```sh
+    $ git remote add osc44r https://github.com/Osc44r/tf2autobot.git
+    $ git fetch osc44r express-load
+    ```
+
+3. Create and switch to a new branch to merge the `express-load` feature:
+    ```sh
+    $ git checkout -b merge-express-load
+    $ git merge osc44r/express-load
+    ```
+
+4. If you are adding this feature to an already running bot, you need to update the configuration manually:
+    - Add `EXPRESSLOAD_API_KEY=` to your `.env` file.
+    - Add `"EXPRESSLOAD_API_KEY": ""` to `ecosystem.json` and fill in your API key.
+    - In your `files/<ACCOUNT_NAME>/options.json`, update the `inventoryApis` section as follows:
+        ```json
+        "inventoryApis": {
+            "steamSupply": {
+                "enable": false
+            },
+            "steamApis": {
+                "enable": false
+            },
+            "expressLoad": {
+                "enable": false
+            }
+        }
+        ```
+    - Ensure to set `"enable": true` if you want to run with the addon.
+
+If this is your first time building and running the bot, the configuration will be generated automatically.
+
+### Try ExpressLoad for Free!
+
+Experience the power of ExpressLoad without any cost! Use the promo code `express` to get 500 free requests. Load Steam inventories without any rate limits and see how much faster and smoother your trading can be.
+
+**Get Started Now**: Make sure you are logged in and redeem your promo code on the [ExpressLoad website](https://express-load.com/dashboard/credits/promo-code). Don't miss out on this opportunity to enhance your trading efficiency!
+
+### Join the ExpressLoad Discord Server!
+
+Stay updated and get instant support by joining the [ExpressLoad Discord server](https://discord.gg/GFraTwE2pW). Connect with other users, share your experiences, and be the first to know about new features and updates.
+
+**Join Our Community**: Click the link and become a part of the ExpressLoad community today! Get the help you need and make the most of your trading bot.
 ## JetBrains Support
 
 ### TF2Autobot is now officially supported by JetBrains! Click [Here](https://www.jetbrains.com/?from=TF2Autobot) to know more about it.
