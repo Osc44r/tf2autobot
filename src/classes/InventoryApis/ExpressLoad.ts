@@ -17,4 +17,11 @@ export default class ExpressLoad extends InventoryApi {
             {}
         ];
     }
+
+    protected getHeaders(): UnknownDictionaryKnownValues {
+        return {
+            'X-API-KEY': this.getApiKey(),
+        };
+    }
+
 }
